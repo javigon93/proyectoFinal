@@ -1,0 +1,75 @@
+
+@each $key in getPaddingKeys() {
+
+  .g--padding{
+    &--#{$key}{
+      padding: getPaddings($key);
+    }
+  }
+
+  .g--padding-top{
+    &--#{$key}{
+      padding-top: getPaddings($key);
+    }
+  }
+
+  .g--padding-bottom{
+    &--#{$key}{
+      padding-bottom: getPaddings($key);
+    }
+  }
+
+  .g--padding-left{
+    &--#{$key}{
+      padding-left: getPaddings($key);
+    }
+  }
+
+  .g--padding-right{
+    &--#{$key}{
+      padding-right: getPaddings($key);
+    }
+  }
+
+}
+
+
+
+@each $Bkkey in getBkpointKeys() {
+  @media (min-width: getBkpoints($Bkkey)) {
+    @each $key in getPaddingKeys() {
+
+      .g--padding{
+        &--#{$key}\@#{$Bkkey}{
+          padding: getPaddings($key);
+        }
+      }
+
+      .g--padding-top{
+        &--#{$key}\@#{$Bkkey}{
+          padding-top: getPaddings($key);
+        }
+      }
+
+      .g--padding-bottom{
+        &--#{$key}\@#{$Bkkey}{
+          padding-bottom: getPaddings($key);
+        }
+      }
+
+      .g--padding-left{
+        &--#{$key}\@#{$Bkkey}{
+          padding-left: getPaddings($key);
+        }
+      }
+
+      .g--padding-right{
+        &--#{$key}\@#{$Bkkey}{
+          padding-right: getPaddings($key);
+        }
+      }
+
+    }
+  }
+}
+

@@ -1,0 +1,68 @@
+.c-cart-select {
+  background-color: getColor("default",7);
+  color: getColor("white",1);
+  width: 330px;
+  height: 50px;
+  border-radius: getBorderRadiuses("2");
+  cursor: pointer;
+
+  @media (max-width: getBkpoints("md")) {
+    width: 250px;
+  }
+  @media (max-width: getBkpoints("sm")) {
+    width: 150px;
+  }
+
+
+  &:hover {
+    background-color: getColor("default", 8);
+  }
+
+  &__item {
+    margin: auto;
+    margin-left: getMargins("5");
+  }
+
+
+  &__options {
+    position: absolute;
+    top: 160px;
+    border: getColor("white", 1) 1px solid;
+    border-radius: getBorderRadiuses("3");
+
+    @media (max-width: getBkpoints("sm")) {
+      // left: 170px;
+      left: 35.75vw;
+    }
+  }
+
+
+  &__option {
+    height: 50px;
+    background-color: getColor("default",4);
+    border-bottom: getColor("white", 1) 1px solid;
+    border-bottom-left-radius: getBorderRadiuses("0");
+    border-bottom-right-radius: getBorderRadiuses("0");
+    cursor: pointer;
+
+    @media (max-width: getBkpoints("sm")) {
+      width: 250px;
+    }
+
+    &:hover {
+      background-color: getColor("default", 8);
+    }
+  }
+
+  &__selected {
+    background-color: getColor("default",6);
+  }
+
+  &__button {
+
+    @media (max-width: getBkpoints("sm")) {
+      width: 250px;
+    }
+  }
+
+}

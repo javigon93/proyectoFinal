@@ -1,0 +1,22 @@
+.g--bgc-grey {
+  background-color: getColor("white",4);
+  margin-top: 15px;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0px;
+  z-index: -2;
+
+  @media (min-width: getBkpoints("md")) {
+    margin-top: 30px;
+  }
+}
+
+
+.g--background-grey{
+
+  background-color: getColor("white",4);
+
+
+
+}

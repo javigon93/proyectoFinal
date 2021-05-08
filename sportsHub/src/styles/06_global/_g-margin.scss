@@ -1,0 +1,75 @@
+
+@each $key in getMarginKeys() {
+
+  .g--margin{
+    &--#{$key}{
+      margin: getMargins($key);
+    }
+  }
+
+  .g--margin-top{
+    &--#{$key}{
+      margin-top: getMargins($key);
+    }
+  }
+
+  .g--margin-bottom{
+    &--#{$key}{
+      margin-bottom: getMargins($key);
+    }
+  }
+
+  .g--margin-left{
+    &--#{$key}{
+      margin-left: getMargins($key);
+    }
+  }
+
+  .g--margin-right{
+    &--#{$key}{
+      margin-right: getMargins($key);
+    }
+  }
+
+}
+
+
+
+@each $Bkkey in getBkpointKeys() {
+  @media (min-width: getBkpoints($Bkkey)) {
+    @each $key in getMarginKeys() {
+
+      .g--margin{
+        &--#{$key}\@#{$Bkkey}{
+          margin: getMargins($key);
+        }
+      }
+
+      .g--margin-top{
+        &--#{$key}\@#{$Bkkey}{
+          margin-top: getMargins($key);
+        }
+      }
+
+      .g--margin-bottom{
+        &--#{$key}\@#{$Bkkey}{
+          margin-bottom: getMargins($key);
+        }
+      }
+
+      .g--margin-left{
+        &--#{$key}\@#{$Bkkey}{
+          margin-left: getMargins($key);
+        }
+      }
+
+      .g--margin-right{
+        &--#{$key}\@#{$Bkkey}{
+          margin-right: getMargins($key);
+        }
+      }
+
+    }
+  }
+}
+

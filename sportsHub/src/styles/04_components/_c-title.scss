@@ -1,0 +1,50 @@
+.c-title{
+
+  color: getColor("white",1);
+  font-size: 24px;
+  text-align: center;
+  font-weight: 500;
+
+  &__left {
+    font-size: getFontSizes("l1");
+    text-align: left;
+    margin-top: getMargins("4");
+    font-weight: normal;
+  }
+
+  &__mount {
+    font-size: getFontSizes("l2");
+    font-weight: normal;
+  }
+
+  &__page {
+    text-align: left;
+    color: getColor("default",5);
+    font-size: getFontSizes("m4");
+    font-weight: bold;
+    margin-top: 110px;
+
+    @media (max-width: getBkpoints("md")) {
+      font-size: getFontSizes("m3");
+      margin-top: getMargins("10");
+    }
+  }
+
+}
+
+@each $Bkkey in getBkpointKeys() {
+
+  @media (min-width: getBkpoints($Bkkey)) {
+      @each $fontSizeKey in getFontSizesKeys() {
+          .c-title--#{$fontSizeKey}\@#{$Bkkey} {
+            color: getColor("white",1);
+            font-size: getFontSizes($fontSizeKey);
+            text-align: center;
+            font-weight: 500;
+
+          }
+      }
+  }
+}
+
+

@@ -1,0 +1,66 @@
+.c-box{
+  display: flex;
+  justify-content: center;
+  padding-top: getPaddings("2");
+  padding-bottom: getPaddings("2");
+
+  &--error{
+    animation-name: color-animation ;
+    animation-duration: 3s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+
+    border-radius: getBorderRadiuses("2");
+
+
+    text-align: center;
+
+
+    transition: background-color 1s ;
+
+
+  }
+
+
+
+
+
+
+}
+.input-box-container {
+  position: relative;
+}
+.input-box {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+// .c-box--error :hover{
+
+//   background-color: getColor("alternative", 6);
+
+
+
+
+// }
+
+@keyframes color-animation {
+  0% {
+    color: transparent;
+    border: 2px solid transparent;
+   background-color: transparent;
+  }
+
+
+
+  100% {
+    color: getColor("alternative", 6);
+    // border: 3px solid getColor("alternative", 6);
+    border: 3px solid transparent;
+    background-color: getColor("white", 5);
+  }
+
+}
+

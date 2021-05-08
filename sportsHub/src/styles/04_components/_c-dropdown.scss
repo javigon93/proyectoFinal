@@ -1,0 +1,9 @@
+.c-dropdown {
+  width: 400px;
+
+  &--center {
+    margin: auto;
+    padding: getPaddings("4") 0px;
+  }
+
+}

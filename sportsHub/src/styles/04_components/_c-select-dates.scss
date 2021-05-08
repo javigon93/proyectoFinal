@@ -1,0 +1,11 @@
+.c-select-dates {
+  font-size: getFontSizes("m1");
+  padding: getPaddings("2");
+  padding-right: getPaddings("8");
+  border-radius: getBorderRadiuses("2");
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  @media (max-width: getBkpoints("md")) {
+    font-size: getFontSizes("s3");
+  }
+}

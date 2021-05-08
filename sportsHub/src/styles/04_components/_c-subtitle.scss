@@ -1,0 +1,32 @@
+.c-subtitle{
+
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+
+}
+
+
+@each $Bkkey in getBkpointKeys() {
+
+  @media (min-width: getBkpoints($Bkkey)) {
+      @each $fontSizeKey in getFontSizesKeys() {
+          .c-subtitle--#{$fontSizeKey}\@#{$Bkkey} {
+            color: white;
+            font-size: getFontSizes($fontSizeKey);
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+
+          }
+      }
+  }
+}

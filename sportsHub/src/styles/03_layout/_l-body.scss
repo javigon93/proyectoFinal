@@ -1,0 +1,36 @@
+.l-body {
+  width: 360px;
+  margin: auto;
+
+  font-family: "IBM Plex Sans";
+}
+
+
+
+@each $Bkkey in getBkpointKeys() {
+
+  @media (min-width: getBkpoints($Bkkey)) {
+    .l-body\@#{$Bkkey} {
+      width: 1100px;
+      margin: auto;
+    }
+  }
+
+}
+
+@each $Bkkey in getBkpointKeys() {
+
+  @media (min-width: getBkpoints($Bkkey)) {
+      @each $bWidth in getBodyWidthKeys() {
+          .l-body--#{$bWidth}\@#{$Bkkey} {
+            width: unquote( getBodyWidth($bWidth) );
+
+          }
+      }
+  }
+}
+
+// // hide all scrollbars
+// ::-webkit-scrollbar {
+//   display: none;
+// }

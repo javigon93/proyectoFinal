@@ -1,0 +1,20 @@
+
+@function getShadows($name) {
+    @return unquote(map-get($box-shadows, #{$name}));
+}
+
+@function getShadowsKeys() {
+    @return map-keys($box-shadows);
+}
+
+@mixin shadows($depth) {
+    box-shadow: getShadows($depth);
+    -webkit-box-shadow: getShadows($depth);
+    -moz-box-shadow: getShadows($depth);
+}
+
+@each $name in getShadowsKeys() {
+    .g--box-shadow-#{$name} {
+        @include shadows($name);
+    }
+}

@@ -1,0 +1,130 @@
+@function getPaddingKeys(){
+
+  @return map-keys($paddings);
+
+
+
+}
+
+
+@function getPaddings($key){
+
+  @return map-get($paddings , $key );
+
+
+}
+
+
+@function getMarginKeys(){
+
+  @return map-keys($margins);
+
+
+
+}
+
+
+@function getMargins($key){
+
+  @return map-get($margins , $key );
+
+
+}
+
+
+
+@function getWidthKeys(){
+
+
+  @return map-keys($widths);
+
+
+  }
+
+  @function getWidths($key){
+
+
+  @return unquote(map-get($widths , $key ));
+
+
+  }
+
+
+  @function getBkpointKeys(){
+
+
+    @return map-keys($breakpoints);
+
+
+  }
+
+
+  @function getBkpoints($key){
+
+    @return unquote(map-get($breakpoints , $key ));
+
+  }
+
+  @function getColorKeys(){
+
+    @return map-keys($colors);
+
+  }
+
+
+  @function getColorVariants($key) {
+
+    @return (map-get($colors,""+$key));
+  }
+
+
+  @function getColor($key,$index) {
+
+    @return nth(map-get($colors,""+$key),$index);
+  }
+
+
+
+
+
+  @function getFontSizesKeys(){
+    @return map-keys($font-sizes);
+  }
+
+
+  @function getFontSizes($key){
+    @return map-get($font-sizes, $key);
+  }
+
+
+  @function getBorderRadiusesKeys(){
+    @return map-keys($border-radiuses);
+  }
+
+
+  @function getBorderRadiuses($key){
+    @return map-get($border-radiuses, $key);
+  }
+
+
+  @function getBodyWidthKeys(){
+    @return map-keys($body-width);
+  }
+
+
+  @function getBodyWidth($key){
+    @return map-get($body-width, $key);
+  }
+
+
+  @function getFontWeightKeys(){
+
+    @return map-keys($font-weights);
+
+  }
+
+  @function getFontWeight($key){
+
+    @return map-get($font-weights, $key);
+
+  }

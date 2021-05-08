@@ -1,0 +1,20 @@
+.g--vertical-padding{
+
+@each $paddingKey in getPaddingKeys() {
+
+  &--#{$paddingKey}{
+
+
+    padding-top: getPaddings($paddingKey);
+    padding-bottom: getPaddings($paddingKey);
+
+
+
+  }
+
+}
+
+
+
+
+}

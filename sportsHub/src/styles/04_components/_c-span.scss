@@ -1,0 +1,34 @@
+.c-span{
+  color: getColor("white",1);
+  font-size: getFontSizes("m1");
+
+  &__light {
+    opacity: 0.5;
+  }
+
+  &__fat {
+    font-weight: bold;
+  }
+
+  &__big {
+    font-size: getFontSizes("m2");
+  }
+
+  &__green {
+    color: rgb(94, 179, 94);
+    font-size: getFontSizes("m2");
+    margin-top: getMargins("3");
+  }
+
+  &__red {
+    color: #ff8282;
+    font-size: getFontSizes("m2");
+    margin-top: getMargins("3");
+  }
+
+  &__littleUpper {
+    font-size: getFontSizes("s3");
+    margin-bottom: getMargins("3");
+    text-transform: uppercase;
+  }
+}

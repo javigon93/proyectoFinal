@@ -1,0 +1,13 @@
+.g--font-weight{
+
+  @each $F-WKey in getFontWeightKeys() {
+    &--#{$F-WKey} {
+      font-weight: getFontWeight($F-WKey);
+    }
+  }
+
+
+
+
+
+}

@@ -1,0 +1,19 @@
+.g--vertical-margin{
+
+
+  @each $marginKey in getMarginKeys() {
+
+    &--#{$marginKey}{
+
+
+      margin-top: getMargins($marginKey);
+      margin-bottom: getMargins($marginKey);
+
+
+
+    }
+
+  }
+
+
+}

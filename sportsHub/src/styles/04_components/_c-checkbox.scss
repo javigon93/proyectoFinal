@@ -1,0 +1,62 @@
+.c-checkbox{
+
+  width: 16px;
+  height: 16px;
+  margin: 1px 9px  0;
+  border-radius: 2px;
+  border: solid 1px #e8e8e8;
+  background: transparent;
+
+  @media (max-width: getBkpoints("sm")){
+    margin-left: -22px;
+  }
+
+  &:checked{
+
+    background: getColor("alternative", 5);
+
+  }
+
+
+
+  &__portfolios {
+    margin-left: 14px;
+    margin-right: 6px;
+    margin-top: 15px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid white;
+    border-radius: getBorderRadiuses("2");
+
+    &--checked {
+      background-color: getColor("default", 7);
+      border: none;
+    }
+  }
+
+  &__checkmark {
+    width: 6px;
+    height: 10px;
+    margin-left: -18px;
+    margin-top: 17px;
+    margin-right: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+
+
+}
+
+
+  @media (min-width: getBkpoints("lg")) {
+
+          .c-checkbox\@lg {
+            width: 18px;
+            height: 18px;
+
+          }
+      }
+
+

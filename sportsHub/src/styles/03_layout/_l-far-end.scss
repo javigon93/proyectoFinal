@@ -1,0 +1,28 @@
+.l-far-end{
+
+
+  display: flex;
+
+
+  &__right{
+
+    margin-left:auto ;
+
+
+  }
+
+
+  &__left{
+
+
+    margin-right: auto;
+
+  }
+
+  &--center {
+    align-self: center;
+  }
+
+
+
+}

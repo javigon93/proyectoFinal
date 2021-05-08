@@ -1,0 +1,71 @@
+.c-link{
+
+  @each $variant in getColorKeys() {
+
+
+    &__#{$variant}{
+
+
+      color: getColor($variant, 5);
+      background-color: transparent;
+      border-color: transparent;
+
+      // padding-left:  getPaddings("5");
+
+
+      // margin: 40px 15px 0 359px;
+
+      font-size: 12px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+
+      color: #808ab1;
+
+
+
+
+
+    }
+
+
+    &__#{$variant}:hover{
+
+
+      color: getColor($variant,4);
+
+
+    }
+
+
+
+
+}
+
+
+
+
+}
+
+
+@each $Bkkey in getBkpointKeys() {
+
+  @media (min-width: getBkpoints($Bkkey)) {
+      @each $fontSizeKey in getFontSizesKeys() {
+          .c-link--#{$fontSizeKey}\@#{$Bkkey} {
+            font-size: getFontSizes($fontSizeKey);
+
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+
+          }
+      }
+  }
+}
+

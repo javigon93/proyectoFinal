@@ -1,0 +1,19 @@
+.g--font-size {
+
+  @each $f-s in getFontSizesKeys() {
+    &-#{$f-s} {
+      font-size: getFontSizes($f-s);
+    }
+  }
+
+  @each $Bkkey in getBkpointKeys() {
+    @media (min-width: getBkpoints($Bkkey)) {
+      @each $f-s in getFontSizesKeys() {
+        &-#{$f-s}\@#{$Bkkey} {
+          font-size: getFontSizes($f-s);
+        }
+      }
+    }
+  }
+
+}

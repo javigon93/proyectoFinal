@@ -1,0 +1,25 @@
+.c-select-portfolio {
+  width: 330px;
+  height: 50px;
+  border-radius: getBorderRadiuses("2");
+  color: getColor("white", 1);
+  background-color: getColor("default", 7);
+  border: none;
+  padding: getPaddings("0") getPaddings("4");
+
+  &:hover {
+    background-color: getColor("default", 8);
+  }
+
+
+
+  &__option {
+    height: 50px;
+
+    &:hover {
+      background-color: getColor("default", 8);
+    }
+  }
+
+
+}

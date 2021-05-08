@@ -1,0 +1,15 @@
+
+
+@each $Bkkey in getBkpointKeys() {
+
+  @media (min-width: getBkpoints($Bkkey)) {
+      @each $paddingKey in getPaddingKeys() {
+          .g--horizontal-padding--#{$paddingKey}\@#{$Bkkey} {
+
+           padding-left: getPaddings($paddingKey);
+           padding-right: getPaddings($paddingKey);
+
+          }
+      }
+  }
+}

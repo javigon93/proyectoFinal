@@ -1,0 +1,113 @@
+.c-menu {
+
+
+  &-options {
+    text-decoration: none;
+    color: getColor("default",5);
+    opacity: 0.5;
+    font-size: 14px;
+    height: 20px;
+
+    @media (max-width: getBkpoints("md")) {
+      display: none;
+    }
+
+
+    &--selected{
+      opacity: 1;
+      font-weight: bold;
+      border-bottom: 2px solid red;
+      padding-bottom: getPaddings("2");
+    }
+  }
+
+
+  &-dropdown-main {
+
+
+    &__options {
+      position: absolute;
+      margin-top: getMargins("7");
+      width: 250px;
+    }
+
+    &__option {
+      height: 35px;
+      background-color: getColor("white", 8);
+      padding: 9px 8px;
+
+      &:hover {
+        background-color: #c7ccd3;
+      }
+    }
+
+
+    &__item {
+      text-decoration: none;
+      color: getColor("default",5);
+      font-size: 14px;
+
+      &--selected {
+        font-weight: bold;
+      }
+    }
+  }
+
+
+
+
+  &-dropdown {
+    width: 250px;
+    height: 25px;
+    color: getColor("default",5);
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 2px solid red;
+    padding-top: getPaddings("2");
+    padding-left: getPaddings("2");
+
+    @media (min-width: getBkpoints("md")) {
+      display: none;
+    }
+
+
+    &__options {
+      position: absolute;
+      width: 250px;
+    }
+
+
+    &__option {
+      height: 25px;
+      background-color: getColor("white", 8);
+
+      @media (min-width: getBkpoints("md")) {
+        display: none;
+      }
+
+      &:hover {
+        // background-color: rgba(getColor("default", 5), $alpha: 0.2);
+        background-color: #c7ccd3;
+      }
+    }
+
+
+    &__item {
+      text-decoration: none;
+      color: getColor("default",5);
+      font-size: 14px;
+      height: 25px;
+      padding-top: 5px;
+      padding-left: 10px;
+
+      @media (min-width: getBkpoints("md")) {
+        display: none;
+      }
+
+      &--selected {
+        font-weight: bold;
+      }
+    }
+  }
+
+}

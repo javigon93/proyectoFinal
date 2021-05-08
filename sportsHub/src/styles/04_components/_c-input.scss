@@ -1,0 +1,16 @@
+.c-input{
+
+
+  border-radius: 10px ;
+  border-color: transparent;
+  background: getColor("default", 7);
+  color: #808ab1;
+
+
+  @media (max-width: getBkpoints("sm")){
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+
+
+}
