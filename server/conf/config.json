@@ -1,0 +1,6 @@
+{
+    "database": {
+        "connectionURL": "mongodb://localhost:27017/",
+        "db": "sportsHub"
+    }
+}

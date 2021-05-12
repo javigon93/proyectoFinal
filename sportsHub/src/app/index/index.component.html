@@ -1,0 +1,68 @@
+<div class="l-page">
+  <div class="g--vertical-margin--1">
+    <p-galleria [(value)]="images" [responsiveOptions]="responsiveOptions" [autoPlay]="true" [transitionInterval]="5000"
+      [showThumbnails]="false" [showIndicators]="true" style="max-width: 800px; ">
+      <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" style="width: 100%; height: 600px; display: block;" />
+      </ng-template>
+      <ng-template pTemplate="thumbnail" let-item>
+        <div class="p-grid p-nogutter p-justify-center">
+          <img [src]="item.previewImageSrc" height="50px" width="50px" />
+        </div>
+      </ng-template>
+      <ng-template pTemplate="caption" style="width: 100%;" let-item>
+        <h4 style="margin-bottom: .5rem; color: #ffffff;">{{item.title}}</h4>
+        <p>{{item.alt}}</p>
+      </ng-template>
+    </p-galleria>
+  </div>
+  <div class="l-columns l-columns--2">
+    <div class="c-box">
+      <div>
+        <img src="../../assets/showCase/img/route.png" height="350px" width="350px" alt="route">
+      </div>
+      <div>
+        <div class="c-title" style="color: black;">Descubre Entrenamientos</div>
+        <div class="c-subtitle" style="color: black;">Puedes tanto crear como obtener los entrenamientos de los usuarios
+          de nuestra comunidad!</div>
+      </div>
+      </div>
+      <div class="c-box">
+        <div>
+          <img src="../../assets/showCase/img/route.png" height="350px" width="350px" alt="route">
+        </div>
+        <div>
+          <div class="c-title" style="color: black;">Descubre Entrenamientos</div>
+          <div class="c-subtitle" style="color: black;">Puedes tanto crear como obtener los entrenamientos de los
+            usuarios
+            de nuestra comunidad!</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="l-columns l-columns--2">
+      <div class="c-box">
+        <div>
+          <img src="../../assets/showCase/img/route.png" height="350px" width="350px" alt="route">
+        </div>
+        <div>
+          <div class="c-title" style="color: black;">Descubre Entrenamientos</div>
+          <div class="c-subtitle" style="color: black;">Puedes tanto crear como obtener los entrenamientos de los usuarios
+            de nuestra comunidad!</div>
+        </div>
+        </div>
+        <div class="c-box">
+          <div>
+            <img src="../../assets/showCase/img/route.png" height="350px" width="350px" alt="route">
+          </div>
+          <div>
+            <div class="c-title" style="color: black;">Descubre Entrenamientos</div>
+            <div class="c-subtitle" style="color: black;">Puedes tanto crear como obtener los entrenamientos de los
+              usuarios
+              de nuestra comunidad!</div>
+          </div>
+        </div>
+
+      </div>
+
+  </div>

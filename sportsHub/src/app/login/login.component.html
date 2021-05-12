@@ -1,0 +1,59 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<div class="l-page__body" style="min-height: 70vh;">
+  <div class="l-columns">
+    <div class="l-vertical">
+      <div class="c-title c-title--l2@md g--margin-bottom--6">Login</div>
+      <div class="c-subtitle c-subtitle--m2@md g--margin-bottom--10" style="color: black;">Introduce tus datos de usuario</div>
+      <div class="c-container">
+        <form class="l-vertical">
+
+          <input type="text" id="username" name="username" placeholder="Introduce usuario"
+            [(ngModel)]="user.username"
+            class="c-input g--vertical-padding--4 g--padding-left--5  g--margin-bottom--4">
+
+          <input type="password" placeholder="Introduce Contraseña" id="password" name="password"
+            [(ngModel)]="user.password"
+            class="c-input g--vertical-padding--4 g--padding-left--5 g--margin-bottom--4">
+
+          <div class="l-far-end" *ngIf="rememberMeIsChecked==false">
+
+            <input class="c-checkbox c-checkbox@lg g--margin-bottom--8" type="checkbox" id="remember_checkbox"
+              (click)=checkHandler() >
+            <label class="c-checkboxText c-checkboxText--m2@lg" for="recordar" style="color: black;">Recuérdame</label>
+          </div>
+          <div class="l-far-end" *ngIf="rememberMeIsChecked">
+
+            <input class="c-checkbox c-checkbox@lg g--margin-bottom--8" type="checkbox" id="remember_checkbox"
+              (click)=checkHandler() checked="true">
+            <label class="c-checkboxText c-checkboxText--m2@lg" for="recordar" style="color: black;">Recuérdame</label>
+          </div>
+
+          <div *ngIf="isAuthError" class="c-box c-box--error g--margin-bottom--7">
+            <div class="c-errorText  g--font-size-m1@sm" >Ha habido un error</div>
+          </div>
+          <div *ngIf="isError" class="c-box c-box--error g--margin-bottom--7">
+            <div class="c-errorText  g--font-size-m1@sm">Ha habido otro error</div>
+          </div>
+
+          <button type="submit" class="c-button__alternative g--vertical-padding--4 g--margin-bottom--10
+          c-button__alternative@sm" (click)=login()>Acceder</button>
+          <!-- <div class="l-horizontal ">
+            <a class="c-link__misc c-link--m1@lg" href="">{{ 'login.password' | translate }}</a>
+            <a class="c-link__misc c-link--m1@lg" href="">{{ 'login.new' | translate }}</a>
+
+          </div> -->
+        </form>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+
+</div>

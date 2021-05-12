@@ -4,13 +4,14 @@
   gap: 10px;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 
 
   &-menu {
     display: flex;
     direction: row;
     gap: 50px;
-    margin: getMargins("7") getMargins("0");
+    margin: getMargins("4") getMargins("0");
 
     @media (max-width: getBkpoints("md")) {
       // display: none;

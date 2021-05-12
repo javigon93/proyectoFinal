@@ -1,8 +1,9 @@
 .c-box{
   display: flex;
   justify-content: center;
-  padding-top: getPaddings("2");
-  padding-bottom: getPaddings("2");
+  align-items: center;
+  // margin-top: getPaddings("5");
+  // margin-bottom: getPaddings("5");
 
   &--error{
     animation-name: color-animation ;
